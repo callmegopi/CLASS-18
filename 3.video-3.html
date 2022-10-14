@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video controls</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: yellowgreen;
+            padding-top: 30px;
+        }
+        #media {
+            width: 800px;
+            text-align: center;
+            
+
+        }
+
+        #button li {
+            display: inline-block;
+            text-align: center;
+            margin: 15px 10px;
+            
+
+        }
+
+        #button {
+            font-weight: bold;
+            font-size: 24px;
+            margin: 10px;
+            color: red;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="media">
+            <video controls id="myVideo">
+                <source src="./mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div id="button">
+            <ul type="A">
+                <li><button onclick="playPause()"> play/pause</button></li>
+                <li><button onclick="makeBig()">Big</button></li>
+                <li><button onclick="makeSmall()">Small</button></li>
+                <li><button onclick="makeNormal()">Normal</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var videoEelement = document.getElementById("myVideo")
+
+        function playPause() {
+            if (videoEelement.paused) {
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+
+        function makeBig() {
+            videoEelement.style.width = "900px"
+        }
+
+        function makeSmall() {
+            videoEelement.style.width = "600px"
+        }
+        function makeNormal() {
+            videoEelement.style.width = ""
+        }
+    </script>
+</body>
+
+</html>

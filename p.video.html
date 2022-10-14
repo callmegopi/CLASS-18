@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video player</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrapper{
+            display: block;
+            margin: 0 auto;
+            padding: 0;
+            width: 500px;
+            height: 300px;
+            border: 5px solid green;
+        }
+        #videoWrapper {
+            text-align: center;
+        }
+        #button{
+            display: block;
+            text-align: center;
+        }
+        ul{
+            display: block;
+        }
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin: 30px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="videoWrapper">
+            <video controls id="myVideo">
+                <source src="./mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div id="button">
+            <ul>
+                <li><button onclick="playPause()">Play/Pause</button></li>
+                <li><button onclick="makeBig()"> Big</button></li>
+                <li><button onclick="makeSmall()">Small</button></li>
+                <li><button onclick="makeNormal()">Normal</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var videoEelement = document.getElementById("myVideo")
+
+        function playPause(){
+            if (videoEelement.paused){
+                videoEelement.play()
+            } else {
+                videoEelement.pause()
+            }
+        }
+        function makeBig() {
+            videoEelement.style.width="900px"
+        }
+        function makeSmall() {
+            videoEelement.style.width="200px"
+        }
+        function makeNormal() {
+            videoEelement.style.width=""
+        }
+    </script>
+</body>
+</html>

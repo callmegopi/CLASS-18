@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clickMe()">click me</button>
+    <button onmouseover="hoverMe()">hover me</button>
+    <button onmouseout="goOutFromMe()">go out of me</button>
+    <button ondblclick="doubleCliked()">double click</button>
+
+    <input type="text" onfocus="justFocused()" onblur="justBlured()">
+
+    <select name="" id="" onchange="optChangeEvent()">
+        <option value="opt1">option-1</option>
+        <option value="opt1">option-2</option>
+        <option value="opt1">option-3</option>
+        <option value="opt1">option-4</option>
+        <option value="opt1">option-5</option>
+    </select>
+
+    <script>
+        function clickMe(){
+            alert("hello, you just clicked me...!!!")
+        }
+
+        function hoverMe(){
+            console.log("You hoverd me...!!!")
+        } 
+        function goOutFromMe(){
+            console.log("You, gone out of me")
+        }
+        function doubleCliked(){
+            alert("Double Click Happend Here...!!!")
+        }
+        function justFocused(){
+            console.log("You just focused on me or entered me...!!!")
+        }
+        function justBlured(){
+            console.log("You just gone out of input filed...!!!")
+        }
+        function optChangeEvent(){
+            console.log("OptionChange Event happend Here...!!!")
+        }
+    </script>
+</body>
+</html>
